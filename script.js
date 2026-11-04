@@ -2,7 +2,7 @@
    Примеры форматов: https://vk.me/..., https://t.me/..., https://max.ru/...
    Пустое значение не отправит посетителя в чужой аккаунт. */
 const SITE_CONFIG = {
-  contacts: { vk: 'https://vk.ru/milaya__ksu_cosm', telegram: '', max: '' },
+  contacts: { vk: 'https://vk.ru/milaya__ksu_cosm', telegram: 'https://t.me/milaya_ksu', max: '' },
   address: '',
   // При подключении аналитики задайте обработчик: (event, parameters) => ...
   onEvent: null
