@@ -3,7 +3,7 @@
    Пустое значение не отправит посетителя в чужой аккаунт. */
 const SITE_CONFIG = {
   contacts: { vk: 'https://vk.ru/milaya__ksu_cosm', telegram: 'https://t.me/milaya_ksu', max: 'https://max.ru/u/f9LHodD0cOKXxdIANzHFFbBMNkIYjnNQV12KP4fuS4dMJDOxKaqRzpNd6pg' },
-  address: '',
+  address: 'Клиника «Графт» · г. Тюмень, ул. Короленко, 12',
   // При подключении аналитики задайте обработчик: (event, parameters) => ...
   onEvent: null
 };
@@ -73,6 +73,7 @@ const SITE_CONFIG = {
       if (!document.querySelector('dialog[open]')) document.body.classList.remove('modal-open');
     });
   });
+  document.querySelector('[data-route]')?.addEventListener('click', () => track('route_click', 'contacts'));
   if (SITE_CONFIG.address.trim()) document.querySelector('#clinic-address').textContent = SITE_CONFIG.address;
 })();
 
